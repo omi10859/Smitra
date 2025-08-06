@@ -12,6 +12,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shram Mitra</title>
+  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -123,9 +124,12 @@
     }
 
     .stats-section {
-    background: linear-gradient(90deg, #123654, #267dbf);
+    background: url('./assets/bg-for-number.svg') no-repeat center;
+    background-size: cover;
     position: relative;
     overflow: hidden;
+    color: white;
+    padding: 60px 0;
   }
   .custom-wave-top {
     position: absolute;
@@ -135,13 +139,17 @@
     transform: translateY(-99%);
     z-index: 0;
   }
-    .final-card {
+  .final-card {
     background: linear-gradient(to bottom, #f9fbfd, #e8edf2);
     border: 1px solid #d6dce2;
     border-radius: 16px;
     box-shadow: none;
     transition: 0.2s ease-in-out;
     padding: 32px 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .final-card:hover {
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.06);
@@ -260,7 +268,7 @@
 
     /* insurance */
     .insurance-section {
-      padding: 100px 0;
+      padding: 20px 0;
     }
 
     .insurance-section h2 {
@@ -380,13 +388,17 @@
       color: #666;
       font-size: 0.9rem;
     }
+    .tablet-img {
+      transform: scale(1.55); /* increase this as needed */
+      /* transform-origin: center left; */
+    }
   
   </style>
 </head>
 
 <body>
   <!-- Header -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3" style="padding-top: 40px !important;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3" style="padding-top: 10px !important;">
   <div class="container d-flex justify-content-between align-items-center">
     <a class="navbar-brand d-flex align-items-center gap-2" href="#">
       <img src="./assets/logo.png" alt="Shram Mitra" style="height: 100px;">
@@ -452,15 +464,15 @@
       </div>
       <div class="row text-center">
         <div class="col-md-4 mb-4">
-          <h1 class="fw-bold text-warning">1000+</h1>
+          <h1 class="fw-bold text-warning" style="font-size: calc(1.375rem + 2.8vw) !important">1000+</h1>
           <p class="fw-semibold">Workers</p>
         </div>
         <div class="col-md-4 mb-4">
-          <h1 class="fw-bold text-warning">60+</h1>
+          <h1 class="fw-bold text-warning" style="font-size: calc(1.375rem + 2.8vw) !important">60+</h1>
           <p class="fw-semibold">Contractors</p>
         </div>
         <div class="col-md-4 mb-4">
-          <h1 class="fw-bold text-warning">20+</h1>
+          <h1 class="fw-bold text-warning" style="font-size: calc(1.375rem + 2.8vw) !important">20+</h1>
           <p class="fw-semibold">Companies</p>
         </div>
       </div>
@@ -469,11 +481,11 @@
   
   <section class="py-5" style="margin-top: 40px;">
     <div class="container">
-      <div class="row g-4">
+      <div class="row g-4 align-items-stretch">
           
         <!-- Worker -->
-          <div class="col-md-4">
-          <div class="card final-card text-center px-4 py-5">
+          <div class="col-md-4 d-flex">
+          <div class="card final-card text-center w-100">
             <img src="./assets/worker-icon.png" alt="Worker Icon" width="70px" class="mb-3 mx-auto d-block">
 
             <h3 class="fw-bold text-darkblue mb-3">For Workers</h3>
@@ -489,8 +501,8 @@
         </div>
 
         <!-- Contractor -->
-        <div class="col-md-4">
-          <div class="card final-card text-center px-4 py-5">
+        <div class="col-md-4 d-flex">
+          <div class="card final-card text-center w-100">
             <img src="./assets/contractor-icon.png" alt="Contractor Icon" width="70px" class="mb-3 mx-auto d-block">
             <h3 class="fw-bold text-darkblue mb-3">For Contractors</h3>
             <ul class="list-unstyled worker-list text-start mx-auto">
@@ -506,8 +518,8 @@
         </div>
 
         <!-- Company -->
-        <div class="col-md-4">
-          <div class="card final-card text-center px-4 py-5">
+        <div class="col-md-4 d-flex">
+          <div class="card final-card text-center w-100">
             <img src="./assets/company-icon.png" alt="Company Icon" width="70px" class="mb-3 mx-auto d-block">
             <h3 class="fw-bold text-darkblue mb-3">For Companies</h3>
             <ul class="list-unstyled worker-list text-start mx-auto">
@@ -529,10 +541,10 @@
   <section class="features-section text-center" id="about">
     <div class="container">
       <h2 class="fw-bold" style="color: #0f2a4b;">India’s First End-to-End<br> <span style="color: #fcbf1e;">Infrastructure Hiring Ecosystem</span></h2>
-      <p class="my-4"> <span style="color: #fcbf1e; font-weight: 600;">Shram Mitra</span> connects workers, contractors, and companies through verified profiles, smart job matching, digital payments, and real-time tracking—making hiring faster, work easier, and the entire construction process more efficient.</p>
+      <p class="my-4"> <span style="color: #fcbf1e; font-weight: 800;">Shram Mitra</span> connects workers, contractors, and companies through verified profiles, smart job matching, digital payments, and real-time tracking—making hiring faster, work easier, and the entire construction process more efficient.</p>
       <div class="row align-items-center mt-5">
         <div class="col-lg-5 mb-4 mb-lg-0">
-          <img src="./assets/dashboard-mock.png" class="img-fluid " alt="Company Dashboard">
+          <img src="./assets/dashboard-mock.png" class="img-fluid tablet-img" alt="Company Dashboard">
         </div>
         <div class="col-lg-7">
           <div class="row g-3">
