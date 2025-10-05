@@ -3,12 +3,12 @@
 
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QMFLR51GVY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-QMFLR51GVY');
-    </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-QMFLR51GVY');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shram Mitra</title>
@@ -19,31 +19,32 @@
     html {
       scroll-behavior: smooth;
     }
+
     @media (max-width: 768px) {
-  .hero {
-    height: 80vh !important;
-    padding-top: 10px !important;
-    padding-bottom: 60px !important;
-    display: flex;
-    align-items: center;
-  }
+      .hero {
+        height: 80vh !important;
+        padding-top: 10px !important;
+        padding-bottom: 60px !important;
+        display: flex;
+        align-items: center;
+      }
 
-  .hero .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-  }
+      .hero .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+      }
 
-  .hero h1 {
-    font-size: 2.5rem !important;
-    line-height: 1.2;
-  }
+      .hero h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+      }
 
-  .hero p {
-    font-size: 1rem;
-  }
-}
+      .hero p {
+        font-size: 1rem;
+      }
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -74,7 +75,7 @@
       z-index: 0;
     }
 
-    .hero > .container {
+    .hero>.container {
       position: relative;
       z-index: 1;
     }
@@ -124,102 +125,111 @@
     }
 
     .stats-section {
-    background: url('./assets/bg-for-number.svg') no-repeat center;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    color: white;
-    padding: 60px 0;
-  }
-  .custom-wave-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(-99%);
-    z-index: 0;
-  }
-  .final-card {
-    background: linear-gradient(to bottom, #f9fbfd, #e8edf2);
-    border: 1px solid #d6dce2;
-    border-radius: 16px;
-    box-shadow: none;
-    transition: 0.2s ease-in-out;
-    padding: 32px 24px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .final-card:hover {
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.06);
-  }
-  .desc-text {
-    color: #1e2d3a;
-    font-size: 14px;
-    margin-bottom: 10px;
-    line-height: 1.5;
-  }
-  .text-darkblue {
-    color: #0c2d4c;
-  }
-  .btn-outline-darkblue {
-    border: 1.5px solid #0c2d4c;
-    color: #0c2d4c;
-    font-size: 14px;
-    border-radius: 10px;
-    padding: 10px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-  }
-  .btn-outline-darkblue:hover {
-    background-color: #0c2d4c;
-    color: #fff;
-  }
-  .worker-card {
-  border-radius: 15px;
-  border: 2px solid #E1E4E8;
-  background: linear-gradient(180deg, #F9FAFB 0%, #E6ECF5 100%);
-  box-shadow: none;
-}
+      background: url('./assets/bg-for-number.svg') no-repeat center;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      color: white;
+      padding: 60px 0;
+    }
 
-.worker-title {
-  color: #0B2C4D;
-  font-weight: 700;
-  font-size: 20px;
-}
+    .custom-wave-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translateY(-99%);
+      z-index: 0;
+    }
 
-.worker-list {
-  font-size: 18px;
-  color: #2F3E4D;
-  line-height: 1.6;
-  max-width: 280px;
-}
+    .final-card {
+      background: linear-gradient(to bottom, #f9fbfd, #e8edf2);
+      border: 1px solid #d6dce2;
+      border-radius: 16px;
+      box-shadow: none;
+      transition: 0.2s ease-in-out;
+      padding: 32px 24px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-.worker-btn {
-  border-radius: 12px;
-  border: 1.5px solid #0B2C4D;
-  padding: 10px 20px;
-  font-weight: 600;
-  color: #0B2C4D;
-  transition: background-color 0.2s ease-in-out;
-}
+    .final-card:hover {
+      box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.06);
+    }
 
-.worker-btn:hover {
-  background-color: #0B2C4D;
-  color: #fff;
-}
+    .desc-text {
+      color: #1e2d3a;
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .text-darkblue {
+      color: #0c2d4c;
+    }
+
+    .btn-outline-darkblue {
+      border: 1.5px solid #0c2d4c;
+      color: #0c2d4c;
+      font-size: 14px;
+      border-radius: 10px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn-outline-darkblue:hover {
+      background-color: #0c2d4c;
+      color: #fff;
+    }
+
+    .worker-card {
+      border-radius: 15px;
+      border: 2px solid #E1E4E8;
+      background: linear-gradient(180deg, #F9FAFB 0%, #E6ECF5 100%);
+      box-shadow: none;
+    }
+
+    .worker-title {
+      color: #0B2C4D;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .worker-list {
+      font-size: 18px;
+      color: #2F3E4D;
+      line-height: 1.6;
+      max-width: 280px;
+    }
+
+    .worker-btn {
+      border-radius: 12px;
+      border: 1.5px solid #0B2C4D;
+      padding: 10px 20px;
+      font-weight: 600;
+      color: #0B2C4D;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .worker-btn:hover {
+      background-color: #0B2C4D;
+      color: #fff;
+    }
 
 
-/* feature section */
-.features-section {
+    /* feature section */
+    .features-section {
       background: url('./assets/feature-bg.png') no-repeat bottom;
       background-size: cover;
       padding: 100px 0;
       position: relative;
     }
+
     .features-section::before {
       content: "";
       position: absolute;
@@ -228,7 +238,7 @@
       z-index: 0;
     }
 
-    .features-section > .container {
+    .features-section>.container {
       position: relative;
       z-index: 1;
     }
@@ -388,59 +398,62 @@
       color: #666;
       font-size: 0.9rem;
     }
+
     .tablet-img {
-      transform: scale(1.55); /* increase this as needed */
+      transform: scale(1.55);
+      /* increase this as needed */
       /* transform-origin: center left; */
     }
-  
   </style>
 </head>
 
 <body>
   <!-- Header -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3" style="padding-top: 10px !important;">
-  <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-      <img src="./assets/logo.png" alt="Shram Mitra" style="height: 100px;">
-    </a>
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="./assets/logo.png" alt="Shram Mitra" style="height: 100px;">
+      </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-center gap-3">
-        <li class="nav-item">
-          <a class="nav-link fw-semibold text-warning" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" href="#contact">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" href="#about">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" href="form.html">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-darkblue px-4 py-2" href="https://app.shrammitra.com/accounts/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-yellow px-4 py-2" href="https://app.shrammitra.com/onboard/user">Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-call px-4 py-2" href="tel:9796495051">Call us - 9796495051</a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center gap-3">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-warning" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="#contact">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="#about">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-dark" href="form.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-darkblue px-4 py-2" href="https://app.shrammitra.com/accounts/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-yellow px-4 py-2" href="https://app.shrammitra.com/onboard/user">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-call px-4 py-2" href="tel:9796495051">Call us - 9796495051</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="container">
-      <h1 class="mb-3">Rozgaar aur reliable <br class="d-none d-md-block"> workforce dhundhna <br class="d-none d-md-block"> hua ab <span>Aasaan.</span></h1>
-      <p><strong>Shram Mitra</strong> — Bharat ka trusted digital platform jo company,<br class="d-none d-md-block"> contractor aur shramik ko jodta hai bina kisi pareshani ke.</p>
+      <h1 class="mb-3">Rozgaar aur reliable <br class="d-none d-md-block"> workforce dhundhna <br
+          class="d-none d-md-block"> hua ab <span>Aasaan.</span></h1>
+      <p><strong>Shram Mitra</strong> — Bharat ka trusted digital platform jo company,<br class="d-none d-md-block">
+        contractor aur shramik ko jodta hai bina kisi pareshani ke.</p>
       <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
         <a href="https://app.shrammitra.com/accounts/login" class="btn btn-yellow d-flex align-items-center gap-2">
           Hire Workers <i class="fas fa-search"></i>
@@ -455,12 +468,15 @@
   <section class="stats-section text-white" id="">
     <div class="custom-wave-top">
       <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="w-100">
-        <path fill="#1c4c7e" fill-opacity="1" d="M0,96L60,106.7C120,117,240,139,360,144C480,149,600,139,720,122.7C840,107,960,85,1080,106.7C1200,128,1320,192,1380,224L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+        <path fill="#1c4c7e" fill-opacity="1"
+          d="M0,96L60,106.7C120,117,240,139,360,144C480,149,600,139,720,122.7C840,107,960,85,1080,106.7C1200,128,1320,192,1380,224L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+        </path>
       </svg>
     </div>
     <div class="container position-relative py-5">
       <div class="text-center mb-4">
-        <h2 class="fw-bold">Connecting <span class="text-warning">Workers</span>. Empowering <span class="text-warning">Contractors</span>. Assisting <span class="text-warning">Companies</span>.</h2>
+        <h2 class="fw-bold">Connecting <span class="text-warning">Workers</span>. Empowering <span
+            class="text-warning">Contractors</span>. Assisting <span class="text-warning">Companies</span>.</h2>
       </div>
       <div class="row text-center">
         <div class="col-md-4 mb-4">
@@ -478,13 +494,13 @@
       </div>
     </div>
   </section>
-  
+
   <section class="py-5" style="margin-top: 40px;">
     <div class="container">
       <div class="row g-4 align-items-stretch">
-          
+
         <!-- Worker -->
-          <div class="col-md-4 d-flex">
+        <div class="col-md-4 d-flex">
           <div class="card final-card text-center w-100">
             <img src="./assets/worker-icon.png" alt="Worker Icon" width="70px" class="mb-3 mx-auto d-block">
 
@@ -540,8 +556,11 @@
   <!-- Features Section -->
   <section class="features-section text-center" id="about">
     <div class="container">
-      <h1 class="fw-bold" style="color: #0f2a4b;">India’s First End-to-End<br> <span style="color: #fcbf1e;">Infrastructure Hiring Ecosystem</span></h1>
-      <p class="my-4"> <span style="color: #fcbf1e; font-weight: 800;">Shram Mitra</span> connects workers, contractors, and companies through verified profiles, smart job matching, digital payments, and real-time tracking—making hiring faster, work easier, and the entire construction process more efficient.</p>
+      <h1 class="fw-bold" style="color: #0f2a4b;">India’s First End-to-End<br> <span
+          style="color: #fcbf1e;">Infrastructure Hiring Ecosystem</span></h1>
+      <p class="my-4"> <span style="color: #fcbf1e; font-weight: 800;">Shram Mitra</span> connects workers, contractors,
+        and companies through verified profiles, smart job matching, digital payments, and real-time tracking—making
+        hiring faster, work easier, and the entire construction process more efficient.</p>
       <div class="row align-items-center mt-5">
         <div class="col-lg-5 mb-4 mb-lg-0">
           <img src="./assets/dashboard-mock.png" class="img-fluid tablet-img" alt="Company Dashboard">
@@ -615,7 +634,8 @@
         <div class="col-md-6 mb-4 mb-md-0">
           <h2><span>Shram Mitra</span> Aims to Provide <br>Security Beyond Just Jobs</h2>
           <p class="mt-4">
-            To ensure safety and dignity for every worker, Shram Mitra is offering free ₹2 lakh insurance under a government scheme to the first 5,000 registered workers.
+            To ensure safety and dignity for every worker, Shram Mitra is offering free ₹2 lakh insurance under a
+            government scheme to the first 5,000 registered workers.
           </p>
           <a href="#" class="btn btn-register">Register Now →</a>
         </div>
@@ -630,7 +650,8 @@
   <section class="download-section">
     <div class="container">
       <h2>Download Shram Mitra</h2>
-      <p>Download the <span>Shram Mitra</span> App now and take the first step towards<br>secure, smart, and seamless construction jobs.</p>
+      <p>Download the <span>Shram Mitra</span> App now and take the first step towards<br>secure, smart, and seamless
+        construction jobs.</p>
       <div class="d-flex justify-content-center gap-4 flex-wrap">
         <a href="#" class="download-btn">
           <img src="./assets/google.png" alt="Android">
@@ -649,7 +670,8 @@
       <div class="row">
         <div class="col-md-5 mb-4 footer-logo">
           <img src="./assets/logo.png" alt="Shram Mitra">
-          <p><strong>Shram Mitra</strong> – Bharat ka trusted digital platform jo company, contractor aur shramik ko jodta hai bina kisi pareshaani ke.</p>
+          <p><strong>Shram Mitra</strong> – Bharat ka trusted digital platform jo company, contractor aur shramik ko
+            jodta hai bina kisi pareshaani ke.</p>
         </div>
         <div class="col-md-3 footer-column" style="margin-top: 20px;">
           <h5>Resources</h5>
@@ -664,8 +686,8 @@
           <ul>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
+            <li><a href="privacy_policy.html">Privacy Policy</a></li>
+            <li><a href="privacy_policy.html">Terms of Service</a></li>
           </ul>
         </div>
       </div>
