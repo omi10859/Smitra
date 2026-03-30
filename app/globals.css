@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+    /* Base Colors */
+    --background: oklch(0.99 0.01 200); /* Slightly cool off-white */
+    --foreground: oklch(0.25 0.05 250); /* Deep charcoal blue */
+
+    /* Primary - Vibrant Gold/Yellow */
+    --primary: oklch(0.84 0.17 84.3);
+    --primary-foreground: oklch(0.2 0.05 80);
+
+    /* Secondary - Your #10284b Midnight Blue */
+    --secondary: oklch(0.28 0.07 250.3); 
+    --secondary-foreground: oklch(0.98 0.01 250);
+
+    /* Borders & Inputs - Tuned to match Secondary */
+    --border: oklch(0.28 0.07 250.3 / 15%); /* Subtle blue-tinted borders */
+    --input: oklch(0.28 0.07 250.3 / 10%);
+    --ring: oklch(0.84 0.17 84.3 / 50%); /* Gold glow */
+
+    /* Rest of the Shadcn variables */
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --muted: oklch(0.96 0.02 250);
+    --muted-foreground: oklch(0.45 0.05 250);
+    --accent: oklch(0.84 0.17 84.3 / 10%); /* Very light gold tint */
+    --accent-foreground: oklch(0.28 0.07 250.3);
+    --destructive: oklch(0.6 0.18 25);
+    
+    --radius: 0.75rem;
+}
+
+.dark {
+    /* Dark Background - Deep Midnight (Slightly darker than secondary) */
+    --background: oklch(0.18 0.04 250); 
+    --foreground: oklch(0.95 0.02 250);
+
+    /* Primary - Keeps the Gold pop in Dark Mode */
+    --primary: oklch(0.88 0.15 90);
+    --primary-foreground: oklch(0.15 0.05 250);
+
+    /* Secondary - Lighter Blue for visibility */
+    --secondary: oklch(0.35 0.08 250);
+    --secondary-foreground: oklch(0.98 0.01 250);
+
+    /* Borders - Softened for Dark Mode */
+    --border: oklch(1 0 0 / 12%);
+    --input: oklch(1 0 0 / 8%);
+    
+    --card: oklch(0.22 0.05 250);
+    --muted: oklch(0.28 0.05 250);
+    --muted-foreground: oklch(0.7 0.05 250);
+}
+
+@theme inline {
+    --font-sans: var(--font-sans);
+    --font-heading: var(--font-raleway);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --radius-lg: var(--radius);
+}
+
+@layer base {
+
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading; /* This automatically applies Raleway to all headings */
+  }
+
+  * {
+    @apply border-border outline-ring/50 transition-colors duration-200;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  /* Custom Scrollbar to match your Midnight Blue theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary/30 rounded-full hover:bg-secondary/50;
+  }
+}
+
+
