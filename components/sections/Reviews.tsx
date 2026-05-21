@@ -10,32 +10,40 @@ import { Star } from "lucide-react"
 
 const REVIEWS = [
   {
-    title: "Best platform for finding reliable work!",
-    text: "Shram Mitra helped me find verified work opportunities near my city. The platform makes communication with contractors very easy.",
-    name: "Ramesh Kumar",
-    role: "Worker",
-    avatar: "https://i.pravatar.cc/300",
+    title: "Best platform for workers and contractors",
+    text: "Shram Mitra helped me find genuine work opportunities near my area. Communication with contractors is simple and the entire process feels trustworthy and smooth.",
+    name: "Rahul Kumar",
+    role: "Construction Worker",
   },
   {
-    title: "Very helpful for managing contractors",
-    text: "We were able to find skilled labor quickly and manage documentation digitally. It reduced our project delays significantly.",
-    name: "Ankit Sharma",
+    title: "Very useful for construction projects",
+    text: "We were able to quickly hire verified workers for our Andhra project. Documentation and labour compliance management became much easier with Shram Mitra.",
+    name: "Pratap Sharma",
+    role: "Project Contractor",
+  },
+  {
+    title: "Great platform for workers and companies",
+    text: "This platform is very useful for workers, contractors and companies. Finding skilled labour and managing teams has become much faster and more organized.",
+    name: "Kundan Kumar Singh",
+    role: "Site Supervisor",
+  },
+  {
+    title: "Documentation management became simple",
+    text: "Finding verified workers is now very easy. The digital documentation process saves time and reduces hassle on large construction projects.",
+    name: "Subhash",
     role: "Project Manager",
-    avatar: "https://i.pravatar.cc/300",
   },
   {
-    title: "Great app for contractors",
-    text: "The project listings and transparent billing system make it easier for contractors like me to get reliable projects.",
-    name: "Vikash Singh",
+    title: "Amazing app for contractors and workers",
+    text: "Shram Mitra helped us reduce delays by quickly connecting with reliable workers and project teams. The platform is easy to use and very practical.",
+    name: "Amit Kumar",
     role: "Contractor",
-    avatar: "https://i.pravatar.cc/300",
   },
   {
-    title: "Highly recommended platform",
-    text: "Managing workforce documentation and compliance used to be a headache. Shram Mitra simplified everything.",
-    name: "Neha Verma",
-    role: "HR Manager",
-    avatar: "https://i.pravatar.cc/300",
+    title: "Every worker should have this app",
+    text: "Shram Mitra is doing great work for labourers across India. Every worker should keep this app because it makes finding work opportunities much easier.",
+    name: "Manoj Turi",
+    role: "Construction Worker",
   },
 ]
 
@@ -45,73 +53,94 @@ const REVIEWS = [
 
 export function Reviews() {
   return (
-    <section className="py-28">
+    <section className="relative overflow-hidden py-28">
+      {/* Background Glow */}
+      <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/5 blur-3xl" />
+
       <Container>
         {/* Heading */}
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 font-heading text-4xl font-bold md:text-5xl">
-            What People Are Saying
+        <div className="relative mb-16 text-center">
+          <h2 className="mb-5 font-heading text-4xl font-bold tracking-tight md:text-5xl">
+            Loved by Workers, Contractors & Companies
           </h2>
 
-          <p className="text-muted-foreground mx-auto max-w-xl">
-            Thousands of workers, contractors and companies trust Shram Mitra to
-            manage their workforce and projects efficiently.
+          <p className="text-muted-foreground mx-auto max-w-2xl text-base leading-relaxed">
+            Real experiences from people using Shram Mitra to simplify
+            workforce hiring, labour management and project coordination.
           </p>
         </div>
 
-        {/* Review Grid */}
-        <div className="grid gap-8 md:grid-cols-2">
+        {/* Reviews Grid */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {REVIEWS.map((review, i) => (
             <motion.div
               key={review.name}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-card rounded-xl border p-8 transition hover:shadow-md"
+              transition={{
+                duration: 0.5,
+                delay: i * 0.08,
+              }}
+              className="
+                group relative overflow-hidden rounded-2xl border
+                bg-background/80 backdrop-blur-sm
+                p-8 transition-all duration-300
+                hover:-translate-y-1
+              "
             >
+              {/* Hover Gradient */}
+              <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-primary/[0.05]" />
+              </div>
+
               {/* Stars */}
-              <div className="mb-4 flex text-primary">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={18} fill="currentColor" />
+              <div className="relative mb-5 flex items-center gap-1 text-primary">
+                {Array.from({ length: 5 }).map((_, idx) => (
+                  <Star
+                    key={idx}
+                    size={18}
+                    fill="currentColor"
+                  />
                 ))}
               </div>
 
               {/* Title */}
-              <h3 className="mb-3 text-lg font-semibold">{review.title}</h3>
+              <h3 className="relative mb-3 text-xl font-semibold tracking-tight">
+                {review.title}
+              </h3>
 
-              {/* Text */}
-              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+              {/* Review Text */}
+              <p className="text-muted-foreground relative mb-7 text-[15px] leading-7">
                 "{review.text}"
               </p>
 
               {/* User */}
-              <div className="flex items-center gap-3">
-                {/* <img
-                  src={review.avatar}
-                  className="h-10 w-10 rounded-full object-cover"
-                /> */}
+              <div className="relative flex items-center gap-3 pt-5">
+                {/* Avatar Initial */}
+                {/* <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 font-semibold text-primary">
+                  {review.name.charAt(0)}
+                </div> */}
 
                 <div>
-                  <p className="text-sm font-medium">{review.name}</p>
+                  <p className="text-sm font-semibold">{review.name}</p>
 
-                  <p className="text-muted-foreground text-xs">{review.role}</p>
+                  <p className="text-muted-foreground text-xs">
+                    {review.role}
+                  </p>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Read More */}
-        {/* <div className="mt-12 text-center">
-          <a
-            href="https://play.google.com"
-            target="_blank"
-            className="font-medium text-secondary hover:underline"
-          >
-            Read more reviews on Google Play →
-          </a>
-        </div> */}
+        {/* Bottom Note */}
+        <div className="mt-14 text-center">
+          <p className="text-muted-foreground text-sm">
+            Trusted by workers, contractors and companies across multiple
+            construction and industrial projects in India.
+          </p>
+        </div>
       </Container>
     </section>
   )
