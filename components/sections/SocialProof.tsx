@@ -13,8 +13,8 @@ import Container from "@/components/ui/Container"
 
 const STATS = [
   { label: "Workers", value: 2000, suffix: "+" },
-  { label: "Contractors", value: 100, suffix: "+" },
-  { label: "Companies", value: 25, suffix: "+" },
+  { label: "Contractors", value: 450, suffix: "+" },
+  { label: "Companies", value: 50, suffix: "+" },
 ]
 
 const LOGOS_TOP = [

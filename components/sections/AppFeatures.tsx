@@ -80,7 +80,7 @@ const AUDIENCE = [
 const FEATURES = [
   {
     title: "Streamlined Labor Registration & Licensing",
-    stat: { value: 25, label: "Companies" },
+    stat: { value: 50, label: "Companies" },
     description:
       "Stop drowning in paperwork. ShramMitra digitizes the entire labor registration and compliance workflow.",
     bullets: [
@@ -91,7 +91,7 @@ const FEATURES = [
     image: "/features/feature1.png",
   },
   {
-    stat: { value: 100, label: "Contractors" },
+    stat: { value: 450, label: "Contractors" },
     title: "Direct Bridge Between Industry & Skill",
     description:
       "We connect verified workers, contractors and companies through a trusted digital platform built for the labor ecosystem.",

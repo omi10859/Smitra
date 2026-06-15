@@ -1,7 +1,7 @@
 "use client"
 
 import Container from "@/components/ui/Container"
-import { Twitter, Facebook, Instagram, Linkedin, Github } from "lucide-react"
+import { Twitter, Facebook, Instagram, Linkedin, Github, Youtube } from "lucide-react"
 import Link from "next/link"
 
 /* ---------------------- */
@@ -27,6 +27,7 @@ const SOCIALS = [
   { icon: Facebook, href: "https://www.facebook.com/people/Shram-Mitra/61582165992366/" },
   { icon: Instagram, href: "https://www.instagram.com/shram.mitra" },
   { icon: Linkedin, href: "https://www.linkedin.com/company/shram-mitra" },
+    { icon: Youtube, href: "https://www.youtube.com/@SHRAMMITRA" },
 ]
 
 /* ---------------------- */

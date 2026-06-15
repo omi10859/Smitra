@@ -23,7 +23,7 @@ function Counter({ value }: { value: number }) {
 const STATS = [
   {
     label: "Contractors",
-    value: 100,
+    value: 450,
     icon: <HardHat className="size-8" />,
   },
   {
@@ -38,7 +38,7 @@ const STATS = [
   },
   {
     label: "Companies",
-    value: 25,
+    value: 50,
     icon: <Building2 className="size-8" />,
   },
 ]
