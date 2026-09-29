@@ -190,7 +190,7 @@ export function AllFeaturesClient() {
               description="India bhar ke government tenders ek hi jagah par discover karein, critical dates dekhein aur naye tenders ke regular alerts paayein."
               tag="Government Tenders"
               image="/hero/tender.png"
-              colSpan="md:col-span-4"
+              colSpan="md:col-span-6"
               heightClass="min-h-[390px] sm:min-h-[420px]"
             />
 
@@ -203,7 +203,7 @@ export function AllFeaturesClient() {
               description="Construction machinery listings browse karein, machine owners se directly contact karein ya apni individual machines list karein."
               tag="Machinery & Equipment"
               image="/hero/machine.png"
-              colSpan="md:col-span-4"
+              colSpan="md:col-span-6"
               heightClass="min-h-[390px] sm:min-h-[420px]"
             />
 
@@ -216,7 +216,20 @@ export function AllFeaturesClient() {
               description="Apne construction projects post karein, required contractors aur machinery find karein ya naye projects discover karke directly connect karein."
               tag="Projects & Network"
               image="/hero/project.png"
-              colSpan="md:col-span-4"
+              colSpan="md:col-span-6"
+              heightClass="min-h-[390px] sm:min-h-[420px]"
+            />
+
+            {/* ============================================================
+                CARD 8 — MANAGE LEDGER
+                ============================================================ */}
+            <BentoFeatureCard
+              slug="ledger-management"
+              title={"Manage\nLedger"}
+              description="Project site expenses aur worker advances digital ledger mein maintain karein, workers ko advance alerts bhejein aur complete financial clarity paayein."
+              tag="Expenses & Advances"
+              image="/hero/ledger.png"
+              colSpan="md:col-span-6"
               heightClass="min-h-[390px] sm:min-h-[420px]"
             />
 

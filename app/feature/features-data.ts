@@ -1145,6 +1145,195 @@ export const FEATURES_DATA: Record<string, FeatureItem> = {
     },
   ],
 },
+
+  "ledger-management": {
+    slug: "ledger-management",
+    aliases: ["ledger", "ledger-management", "expenses", "worker-advances"],
+
+    title: "Ledger Management",
+    badge: "Worker Advances & Site Expenses",
+
+    heroHeading: ["Workforce ka hisaab manage karna", "hua ab"],
+    heroHighlight: "Aasaan.",
+
+    description:
+      "Shram Mitra Ledger Management se contractors apne project sites ke expenses, worker advances aur payments ka digital record maintain kar sakte hain. Worker ko diya gaya advance log karein, uska record track karein aur worker ko advance ki notification bhi bhejein. Workers apne mobile app par liye gaye advances aur related ledger entries dekh sakte hain.",
+
+    heroImage: "/features/pages/ledger-mac.png",
+    heroMockup: true,
+    isMobile: false,
+
+    ctaButtons: [
+      {
+        label: "Manage Ledger",
+        url: "https://app.shrammitra.com/accounts/login",
+        variant: "default",
+      },
+      {
+        label: "9796495051",
+        url: "tel:9796495051",
+        variant: "secondary",
+        icon: "Phone",
+      },
+    ],
+
+    stats: [
+      { label: "Expense Tracking", value: 1, suffix: " System" },
+      { label: "Worker Advances", value: 1, suffix: " Ledger" },
+      { label: "Platforms", value: 2, suffix: " Web & App" },
+    ],
+
+    featureBlocks: [
+      {
+        title: "Site Expenses Ek Jagah Manage Karein",
+
+        description:
+          "Contractors apne project sites par hone wale daily expenses ka digital record maintain kar sakte hain. Consumables, worker payments, advances aur other site expenses ko ledger mein add karke complete expense history track karein.",
+
+        bullets: [
+          {
+            text: "Site ke daily expenses record karein",
+            icon: "Receipt",
+          },
+          {
+            text: "Expense category aur payment mode record karein",
+            icon: "FileText",
+          },
+          {
+            text: "Site-wise expense history track karein",
+            icon: "History",
+          },
+        ],
+
+        image: "/features/pages/ledger.png",
+        isMobile: true,
+      },
+
+      {
+        title: "Workers Ko Advance Dein Aur Record Rakhein",
+
+        description:
+          "Worker ko advance diya hai? Shram Mitra par advance entry create karein aur amount, worker aur related details ka digital record maintain karein. Har advance future reference ke liye ledger mein available rahega.",
+
+        bullets: [
+          {
+            text: "Worker ko diya gaya advance record karein",
+            icon: "IndianRupee",
+          },
+          {
+            text: "Worker-wise advance history dekhein",
+            icon: "UserRound",
+          },
+          {
+            text: "Advance entries ko site ledger ke saath maintain karein",
+            icon: "BookOpen",
+          },
+        ],
+
+        image: "/features/pages/ledger.png",
+        isMobile: true,
+      },
+
+      {
+        title: "Worker Ko Advance Ki Notification Bhejein",
+
+        description:
+          "Jab contractor worker ke naam par advance entry record karta hai, worker ko us advance ki notification mil sakti hai. Isse worker ko apne received advance ka record directly app par dekhne mein help milti hai.",
+
+        bullets: [
+          {
+            text: "Advance entry worker ke saath record karein",
+            icon: "UserCheck",
+          },
+          {
+            text: "Worker ko advance notification mile",
+            icon: "Bell",
+          },
+          {
+            text: "Worker app par advance details dekhein",
+            icon: "Smartphone",
+          },
+        ],
+
+        image: "/features/pages/ledger.png",
+        isMobile: true,
+      },
+
+      {
+        title: "Workers Apne Advances App Par Dekhein",
+
+        description:
+          "Workers bhi Shram Mitra mobile app par apne advances aur related ledger entries dekh sakte hain. Isse worker ko contractor se liye gaye advances ka digital record accessible rehta hai.",
+
+        bullets: [
+          {
+            text: "Apne received advances dekhein",
+            icon: "WalletCards",
+          },
+          {
+            text: "Advance ki date aur amount check karein",
+            icon: "CalendarDays",
+          },
+          {
+            text: "Ledger entries ka record app par dekhein",
+            icon: "FileCheck2",
+          },
+        ],
+
+        image: "/features/pages/ledger.png",
+        isMobile: true,
+      },
+    ],
+
+    howItWorks: [
+      {
+        step: "01",
+        title: "Expense Ya Advance Record Karein",
+        description:
+          "Contractor site par hone wale expenses record karein ya worker ko diya gaya advance ledger mein add karein.",
+      },
+      {
+        step: "02",
+        title: "Ledger Track Karein",
+        description:
+          "Site-wise aur worker-wise ledger entries dekhein aur recorded expenses aur advances ka history maintain karein.",
+      },
+      {
+        step: "03",
+        title: "Worker Ko Record Dikhega",
+        description:
+          "Worker ko advance ki notification mil sakti hai aur worker apne mobile app par received advances aur related ledger entries dekh sakta hai.",
+      },
+    ],
+
+    faqs: [
+      {
+        title: "What can contractors record in the ledger?",
+        content:
+          "Contractors site expenses, worker advances aur other relevant project-related ledger entries record aur track kar sakte hain.",
+      },
+      {
+        title: "Can I record an advance given to a worker?",
+        content:
+          "Haan. Contractor worker ke naam par advance entry create kar sakta hai aur amount aur related details ka digital record maintain kar sakta hai.",
+      },
+      {
+        title: "Will the worker know about an advance?",
+        content:
+          "Haan. Worker ko recorded advance ki notification mil sakti hai, aur worker apne app par advance details dekh sakta hai.",
+      },
+      {
+        title: "Can workers see their advances?",
+        content:
+          "Haan. Workers Shram Mitra mobile app par unke naam par recorded advances aur related ledger entries dekh sakte hain.",
+      },
+      {
+        title: "Is Ledger Management available on web and mobile?",
+        content:
+          "Haan. Ledger-related functionality contractor ke web platform aur worker ke mobile app experience ke saath available hai.",
+      },
+    ],
+  },
 };
 
 export function getFeatureBySlug(slug: string): FeatureItem | undefined {

@@ -43,6 +43,14 @@ import {
   BriefcaseBusiness,
   Send,
   FileCheck2,
+  Receipt,
+  History,
+  IndianRupee,
+  BookOpen,
+  UserCheck,
+  Smartphone,
+  WalletCards,
+  CalendarDays,
 } from "lucide-react";
 import { SocialProof } from "@/components/sections/SocialProof";
 
@@ -79,6 +87,14 @@ function getIcon(name: string, className?: string) {
     BriefcaseBusiness,
     Send,
     FileCheck2,
+    Receipt,
+    History,
+    IndianRupee,
+    BookOpen,
+    UserCheck,
+    Smartphone,
+    WalletCards,
+    CalendarDays,
   };
 
   const IconComp = iconMap[name] || CheckCircle2;

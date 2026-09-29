@@ -77,6 +77,16 @@ const DEFAULT_ITEMS = [
     link: "/feature/project-management",
     accent: "#EAB308",
   },
+
+  {
+    title: "Manage\nLedger",
+    subtitle: "Expenses · Advances · Record",
+    description:
+      "Track site expenses, worker advances, and daily ledger entries digitally with instant worker notifications.",
+    image: "/hero/ledger.png",
+    link: "/feature/ledger-management",
+    accent: "#EAB308",
+  },
 ];
 
 /* ─────────────────────────────────────────────
@@ -333,14 +343,13 @@ export default function CylindricalGallery({
   });
 
   // Normalize items
-  const baseItems = (items && items.length > 0 ? items : DEFAULT_ITEMS)
-    .slice(0, 7)
-    .map((item, idx) => {
-      if (typeof item === "string") {
-        return { ...DEFAULT_ITEMS[idx % DEFAULT_ITEMS.length], title: item };
-      }
-      return { ...DEFAULT_ITEMS[idx % DEFAULT_ITEMS.length], ...item };
-    });
+  const sourceItems = items && items.length > 0 ? items : DEFAULT_ITEMS;
+  const baseItems = sourceItems.map((item, idx) => {
+    if (typeof item === "string") {
+      return { ...DEFAULT_ITEMS[idx % DEFAULT_ITEMS.length], title: item };
+    }
+    return { ...DEFAULT_ITEMS[idx % DEFAULT_ITEMS.length], ...item };
+  });
 
   // Repeat items for seamless 360° cylindrical continuity
   const ringItems = [...baseItems, ...baseItems, ...baseItems];
@@ -349,28 +358,41 @@ export default function CylindricalGallery({
   useEffect(() => {
     const updateDimensions = () => {
       const w = typeof window !== "undefined" ? window.innerWidth : 1200;
+      const count = ringItems.length || 24;
+      const stepRad = (2 * Math.PI) / count;
+      const halfStepSin = 2 * Math.sin(stepRad / 2);
+
       if (w < 640) {
+        const cardWidth = 160;
+        const gap = 20; // visible spacing between cards on mobile
+        const radius = Math.round((cardWidth + gap) / halfStepSin);
         setDimensions({
-          cardWidth: 175,
-          cardHeight: 250,
-          radius: 580,
-          perspective: 1500,
+          cardWidth,
+          cardHeight: 240,
+          radius,
+          perspective: Math.max(1600, Math.round(radius * 2.3)),
           height: 330,
         });
       } else if (w < 1024) {
+        const cardWidth = 230;
+        const gap = 28;
+        const radius = Math.round((cardWidth + gap) / halfStepSin);
         setDimensions({
-          cardWidth: 240,
-          cardHeight: 330,
-          radius: 800,
-          perspective: 2000,
+          cardWidth,
+          cardHeight: 320,
+          radius,
+          perspective: Math.max(2000, Math.round(radius * 2.3)),
           height: 420,
         });
       } else {
+        const cardWidth = 290;
+        const gap = 36;
+        const radius = Math.round((cardWidth + gap) / halfStepSin);
         setDimensions({
-          cardWidth: 300,
-          cardHeight: 400,
-          radius: 1150,
-          perspective: 3000,
+          cardWidth,
+          cardHeight: 390,
+          radius,
+          perspective: Math.max(2800, Math.round(radius * 2.4)),
           height: 500,
         });
       }
